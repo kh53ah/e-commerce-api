@@ -1,4 +1,4 @@
-package com.khaled_GmbH.Multi_Vendor.Marketplace.Catalog.Engine;
+package com.khaled_GmbH.e.commerce.api.e.commerce.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

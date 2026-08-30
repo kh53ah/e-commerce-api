@@ -13,7 +13,7 @@ A backend RESTful API for an e-commerce platform built with Java 26, Spring Boot
 * Set up Flyway for automated schema versioning.
 * Define relational tables, foreign key constraints, and indexes using incremental SQL migration files.
 
-### Step 2: Domain Modeling (JPA Entities)
+### Step 2 [DONE]: Domain Modeling (JPA Entities)
 * Create JPA entity classes mapped directly to database tables.
 * Configure entity relationships (`@OneToOne`, `@ManyToOne`, `@ManyToMany`).
 

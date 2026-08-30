@@ -1,4 +1,4 @@
-package com.khaled_GmbH.Multi_Vendor.Marketplace.Catalog.Engine;
+package com.khaled_GmbH.e.commerce.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
