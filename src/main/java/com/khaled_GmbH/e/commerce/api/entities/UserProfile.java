@@ -8,6 +8,7 @@ import lombok.Setter;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -19,7 +20,7 @@ public class UserProfile {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long id;
+    private UUID id;
     @Column(name = "first_name")
     private String firstname;
     @Column(name = "last_name")
@@ -39,4 +40,5 @@ public class UserProfile {
     @JoinColumn(name = "id")
     @MapsId
     private User user;
+
 }

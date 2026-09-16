@@ -17,7 +17,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Table(name = "orders")
 public class Order {
-    private enum Status {
+    public enum Status {
         PREPARED,
         IN_DELIVERY,
         DELIVERED
@@ -32,10 +32,18 @@ public class Order {
     @Column(name = "created_at", nullable = false, updatable = false)
     private OffsetDateTime createdAt;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;
 
-    @OneToMany(mappedBy = "order")
-    private Set <OrderItem> productsList = new HashSet<>();
+    @OneToMany(mappedBy = "order", cascade = {CascadeType.PERSIST, CascadeType.REMOVE, CascadeType.MERGE})
+    private Set <OrderItem> orderItems = new HashSet<>();
+
+    public void addOrderItem(OrderItem item) {
+        orderItems.add(item);
+    }
+
+    public void removeOrderItem(OrderItem item) {
+        orderItems.remove(item);
+    }
 }

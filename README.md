@@ -17,23 +17,23 @@ A backend RESTful API for an e-commerce platform built with Java 26, Spring Boot
 * Create JPA entity classes mapped directly to database tables.
 * Configure entity relationships (`@OneToOne`, `@ManyToOne`, `@ManyToMany`).
 
-### Step 3: Repositories & Data Access Layer
+### Step 3 [DONE]: Repositories & Data Access Layer
 * Implement Spring Data JPA repositories for CRUD operations.
 * Build custom query methods and dynamic filtering using JPA Specifications.
 
-### Step 4: DTOs & Service Layer
+### Step 4 [DONE]: DTOs & Service Layer
 * Create Data Transfer Objects (DTOs) to decouple internal entities from client requests/responses.
 * Implement business logic in transactional service classes (`@Transactional`).
 * Add custom exception handling and global error-handling controllers.
 
-### Step 5: Authentication & Security
+### Step 5 [Done]: REST Controllers & API Endpoints
+* Expose RESTful endpoints for catalog browsing, product filtering, user profiles, and wishlists.
+* Ensure consistent JSON response structures and HTTP status codes.
+
+### Step 6: Authentication & Security
 * Configure Spring Security 6 with stateless session management.
 * Implement user registration, password hashing (BCrypt), and JWT-based authentication.
 * Set up role-based access control (RBAC) to protect specific endpoints.
-
-### Step 6: REST Controllers & API Endpoints
-* Expose RESTful endpoints for catalog browsing, product filtering, user profiles, and wishlists.
-* Ensure consistent JSON response structures and HTTP status codes.
 
 ---
 

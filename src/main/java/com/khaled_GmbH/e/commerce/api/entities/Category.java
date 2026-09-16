@@ -20,9 +20,16 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
-    @Column(name = "name", nullable = false)
+    @Column(name = "name", nullable = false, unique = true)
     private String name;
 
-    @OneToMany(mappedBy = "category")
+    @OneToMany(mappedBy = "category", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private List <Product> productsList = new ArrayList<>();
+
+    public void removeProducts (Product product) {
+        productsList.remove(product);
+    }
+    public void addProduct (Product product) {
+        productsList.add(product);
+    }
 }

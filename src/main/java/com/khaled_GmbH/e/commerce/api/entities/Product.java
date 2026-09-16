@@ -22,7 +22,7 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
-    @Column(name = "name", nullable = false)
+    @Column(name = "name", nullable = false, unique = true)
     private String name;
     @Column(name = "description")
     private String description;
@@ -43,5 +43,4 @@ public class Product {
 
     @ManyToMany(mappedBy = "wishListItems")
     private Set<User> usersList = new HashSet<>();
-
 }
